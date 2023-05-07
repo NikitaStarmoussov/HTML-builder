@@ -15,6 +15,6 @@ process.on('SIGINT', ()=>{
   exit();
 })
 process.on('exit', ()=>{
-  stdout.write(`\ngoodbye\n`);
+  stdout.write(`goodbye\n`);
   exit();
 })
