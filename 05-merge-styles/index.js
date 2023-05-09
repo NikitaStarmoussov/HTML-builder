@@ -22,7 +22,7 @@ function buildCss(pathFolder) {
         .filter((file) => file.isFile())
         .map((file) => file.name);
       for (let i = 0; i < filesArray.length; i++) {
-        fs.stat(path.join(pathFolder, filesArray[i]), (error, stats) => {
+        fs.stat(path.join(pathFolder, filesArray[i]), () => {
           let ext = path.extname(filesArray[i]).slice(1);
           if (ext === "css") {
             let filePath = path.join(pathFolder, filesArray[i]);
